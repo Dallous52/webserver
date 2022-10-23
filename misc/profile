@@ -1,0 +1,57 @@
+#测试用配置文件
+
+[log]
+out_error_level = 4
+#错误日志最大输入等级
+
+log_addr = misc/log
+#日志创建地址
+
+[proc]
+work_process_num = 4
+#工作子进程数目
+
+start_on_daemons = 1
+#是否以守护进程的方式打开 [1 / 0]
+
+work_connections = 1024
+#epoll最大连接数量
+
+thread_num = 5
+#线程池中线程数
+
+[netSecurity]
+flood_check_start = 1
+#是否开启泛洪检测
+
+flood_interval = 100
+#泛洪检测所允许的最小时间间隔
+#单位ms
+
+flood_packages = 10
+#泛洪检测所允许的时间段内
+#接收到的数据包数量最大值
+
+[socket]
+recovery_wait_time = 40
+#回收线程等待时间
+
+listen_port_count = 2
+#监听端口数
+
+heartbeat_start = 1
+#开启心跳包检查
+
+heartbeat_wait = 20
+#心跳包等待时间
+
+max_send = 1000
+#总发送队列最大滞留量
+
+max_request_send = 300
+#单个连接发送队列最大滞留量
+
+listen_port0 = 80
+#监听端口号0,以此类推
+
+listen_port1 = 443
